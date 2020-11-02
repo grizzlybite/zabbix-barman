@@ -10,10 +10,11 @@ Requirements:
 In order to work you need to configure following option for Zabbix 
 
 * In your sudoers file add following option:
+```
 zabbix  ALL=(barman) NOPASSWD: /usr/bin/barman list-server
 zabbix  ALL=(barman) NOPASSWD: /usr/bin/barman check *
 zabbix  ALL=(barman) NOPASSWD: /etc/zabbix/scripts/barman_discovery.py
-
+```
 * Copy the userparameter_barman.con file to your zabbix agent on the barman server 
 
 * Restart zabbix-agent
